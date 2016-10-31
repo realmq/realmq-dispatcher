@@ -8,7 +8,6 @@ stages:
 
 variables:
   CONTAINER_BUILD_IMAGE: $CI_REGISTRY_IMAGE:$CI_BUILD_REF
-  CONTAINER_RELEASE_IMAGE: $CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME
   CONTAINER_LATEST_IMAGE: $CI_REGISTRY_IMAGE:latest
 
 before_script:
@@ -24,8 +23,8 @@ release-image:
   stage: release
   script:
     - docker pull $CONTAINER_BUILD_IMAGE
-    - docker tag $CONTAINER_BUILD_IMAGE $CONTAINER_RELEASE_IMAGE
-    - docker push $CONTAINER_RELEASE_IMAGE
+    - docker tag $CONTAINER_BUILD_IMAGE $CI_REGISTRY_IMAGE:${CI_BUILD_REF_NAME//\//_}
+    - docker push $CI_REGISTRY_IMAGE:${CI_BUILD_REF_NAME//\//_}
 
 release-latest-image:
   stage: release
