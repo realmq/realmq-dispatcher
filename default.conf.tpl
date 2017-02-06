@@ -33,5 +33,7 @@ server {
 
   location / {
     proxy_pass http://api;
+    proxy_set_header Host            $host;
+    proxy_set_header X-Forwarded-For $remote_addr;
   }
 }
