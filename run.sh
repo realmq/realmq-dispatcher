@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# ensure env params set
+: ${TLD?} ${TLD_SSL_CERT} ${TLD_SSL_CERT_KEY?} ${WILDCARD_SSL_CERT?} ${WILDCARD_SSL_CERT_KEY?}
+
 set -a
 # use defaults
 : ${TLD_SSL_CERT_ROOT=$TLD_SSL_CERT}
