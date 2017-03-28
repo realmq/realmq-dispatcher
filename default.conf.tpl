@@ -1,3 +1,11 @@
+upstream api {
+  server api:8080;
+}
+
+upstream broker-websocket {
+  server broker:8080;
+}
+
 server {
   listen 80 default_server;
   sendfile off;
@@ -17,10 +25,13 @@ server {
 
   index index.html;
   root /usr/share/nginx/html/;
-}
 
-upstream api {
-  server api:8080;
+  location /mqtt {
+    proxy_pass http://broker-websocket/mqtt;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+  }
 }
 
 server {
