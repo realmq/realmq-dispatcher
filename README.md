@@ -11,3 +11,9 @@
 | **WILDCARD_SSL_CERT** | Path to the wildcard (\*.tld) ssl certificate. |
 | **WILDCARD_SSL_CERT_KEY** | Path to the wildcard (\*.tld) ssl certificate key. |
 | **WILDCARD_SSL_CERT_ROOT** | Root certificate chain used for oscp stapling. |
+
+## TLS Configuration
+Links for tweaking ssl configuration:
+- [Mozilla SSL Generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
+- [Android Version Distribution](https://developer.android.com/about/dashboards/index.html)
+- [Client TLS Support](https://www.ssllabs.com/ssltest/clients.html)
