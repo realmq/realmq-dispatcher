@@ -1,3 +1,4 @@
+
 upstream api {
   server api:8080;
 }
@@ -8,21 +9,27 @@ upstream broker-websocket {
 
 server {
   listen 80 default_server;
-  sendfile off;
-  resolver_timeout 5s;
-  index index.html;
-  root /usr/share/nginx/html/;
+  listen [::]:80 default_server;
+
+  # Redirect all HTTP requests to HTTPS with a 301 Moved Permanently response.
+  return 301 https://$host$request_uri;
 }
 
 server {
-  listen 443;
+  listen 443 ssl http2;
+  listen [::]:443 ssl http2;
 
-  server_name ${TLD};
-
-  ssl on;
+  # certs sent to the client in SERVER HELLO are concatenated in ssl_certificate
   ssl_certificate ${TLD_SSL_CERT};
   ssl_certificate_key ${TLD_SSL_CERT_KEY};
 
+  # verify chain of trust of OCSP response using Root CA and Intermediate certs
+  ssl_trusted_certificate ${TLD_SSL_CERT_ROOT};
+
+  # rest of ssl config
+  include includes/ssl.conf;
+
+  server_name ${TLD};
   index index.html;
   root /usr/share/nginx/html/;
 
@@ -35,13 +42,20 @@ server {
 }
 
 server {
-  listen 443;
-  server_name api.${TLD};
+  listen 443 ssl http2;
+  listen [::]:443 ssl http2;
 
-  ssl on;
+  # certs sent to the client in SERVER HELLO are concatenated in ssl_certificate
   ssl_certificate ${WILDCARD_SSL_CERT};
   ssl_certificate_key ${WILDCARD_SSL_CERT_KEY};
 
+  # verify chain of trust of OCSP response using Root CA and Intermediate certs
+  ssl_trusted_certificate ${WILDCARD_SSL_CERT_ROOT};
+
+  # rest of ssl config
+  include includes/ssl.conf;
+
+  server_name api.${TLD};
   location / {
     proxy_pass http://api;
     proxy_set_header Host            $host;
