@@ -17,3 +17,8 @@ Links for tweaking ssl configuration:
 - [Mozilla SSL Generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
 - [Android Version Distribution](https://developer.android.com/about/dashboards/index.html)
 - [Client TLS Support](https://www.ssllabs.com/ssltest/clients.html)
+
+## Changelog
+### 0.5.0
+- Expose MQTT websocket endpoint: `/mqtt`
+- TLS/HTTPS only setup
