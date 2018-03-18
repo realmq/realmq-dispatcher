@@ -15,6 +15,7 @@ server {
   return 301 https://$host$request_uri;
 }
 
+# rtm.${TLD}
 server {
   listen 443 ssl http2;
   listen [::]:443 ssl http2;
@@ -29,7 +30,7 @@ server {
   # rest of ssl config
   include includes/ssl.conf;
 
-  server_name ${TLD};
+  server_name rtm.${TLD};
   index index.html;
   root /usr/share/nginx/html/;
 
@@ -41,6 +42,7 @@ server {
   }
 }
 
+# api.${TLD}
 server {
   listen 443 ssl http2;
   listen [::]:443 ssl http2;
