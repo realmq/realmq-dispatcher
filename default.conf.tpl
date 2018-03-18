@@ -21,11 +21,11 @@ server {
   listen [::]:443 ssl http2;
 
   # certs sent to the client in SERVER HELLO are concatenated in ssl_certificate
-  ssl_certificate ${TLD_SSL_CERT};
-  ssl_certificate_key ${TLD_SSL_CERT_KEY};
+  ssl_certificate ${TLS_CERT};
+  ssl_certificate_key ${TLS_CERT_KEY};
 
   # verify chain of trust of OCSP response using Root CA and Intermediate certs
-  ssl_trusted_certificate ${TLD_SSL_CERT_ROOT};
+  ssl_trusted_certificate ${TLS_CERT_ROOT};
 
   # rest of ssl config
   include includes/ssl.conf;
@@ -48,11 +48,11 @@ server {
   listen [::]:443 ssl http2;
 
   # certs sent to the client in SERVER HELLO are concatenated in ssl_certificate
-  ssl_certificate ${WILDCARD_SSL_CERT};
-  ssl_certificate_key ${WILDCARD_SSL_CERT_KEY};
+  ssl_certificate ${TLS_CERT};
+  ssl_certificate_key ${TLS_CERT_KEY};
 
   # verify chain of trust of OCSP response using Root CA and Intermediate certs
-  ssl_trusted_certificate ${WILDCARD_SSL_CERT_ROOT};
+  ssl_trusted_certificate ${TLS_CERT_ROOT};
 
   # rest of ssl config
   include includes/ssl.conf;
