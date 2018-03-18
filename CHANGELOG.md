@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Changed
 - Content serving on root domain gets replaced by serving of a dedicated subdomain for RTM broker
-  websockets ([#1]).
+  websockets. All unrelated traffic gets redirected to the root domain ([#1]).
 - Interface for configuring TLS got simplified. Instead of `TLD_SSL_*` and `WILDCARD_SSL_*` a single
   configuration pattern is used: `TLS_*` ([#1]).
 
