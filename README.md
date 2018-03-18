@@ -5,12 +5,9 @@
 | VAR   |  Description |
 |-------|--------------| 
 | **TLD** | The greenfield toplevel domain. |
-| **TLD_SSL_CERT** | Path to the toplevel domain ssl certificate. |
-| **TLD_SSL_CERT_KEY** | Path to the toplevel domain ssl certificate key. |
-| **TLD_SSL_CERT_ROOT** | Root certificate chain used for oscp stapling. |
-| **WILDCARD_SSL_CERT** | Path to the wildcard (\*.tld) ssl certificate. |
-| **WILDCARD_SSL_CERT_KEY** | Path to the wildcard (\*.tld) ssl certificate key. |
-| **WILDCARD_SSL_CERT_ROOT** | Root certificate chain used for oscp stapling. |
+| **TLS_CERT** | Path to the TLS certificate covering all subdomains. |
+| **TLS_CERT_KEY** | Path to the TLS certificate key covering all subdomains. |
+| **TLS_CERT_ROOT** | Root certificate chain used for oscp stapling. |
 
 ## TLS Configuration
 Links for tweaking ssl configuration:
