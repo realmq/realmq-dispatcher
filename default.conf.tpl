@@ -15,6 +15,24 @@ server {
   return 301 https://$host$request_uri;
 }
 
+server {
+  listen 443 ssl http default_server;
+  listen [::]:443 ssl http default_server;
+
+  # certs sent to the client in SERVER HELLO are concatenated in ssl_certificate
+  ssl_certificate ${TLS_CERT};
+  ssl_certificate_key ${TLS_CERT_KEY};
+
+  # verify chain of trust of OCSP response using Root CA and Intermediate certs
+  ssl_trusted_certificate ${TLS_CERT_ROOT};
+
+  # rest of ssl config
+  include includes/ssl.conf;
+
+  # redirect all traffic for unknown subdomains to main domain
+  return 301 https://${TLD};
+}
+
 # rtm.${TLD}
 server {
   listen 443 ssl http2;
