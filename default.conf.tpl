@@ -16,8 +16,8 @@ server {
 }
 
 server {
-  listen 443 ssl http default_server;
-  listen [::]:443 ssl http default_server;
+  listen 443 ssl http2 default_server;
+  listen [::]:443 ssl http2 default_server;
 
   # certs sent to the client in SERVER HELLO are concatenated in ssl_certificate
   ssl_certificate ${TLS_CERT};
