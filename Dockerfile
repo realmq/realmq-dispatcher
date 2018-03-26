@@ -3,7 +3,7 @@ FROM nginx:latest
 LABEL \
   Description="Greenfield dispatcher" \
   Vendor="GFCC" \
-  Version="0.5.0"
+  Version="0.6.0"
 
 COPY index.html /usr/share/nginx/html/index.html
 COPY default.conf.tpl /etc/nginx/conf.d/default.conf.tpl
