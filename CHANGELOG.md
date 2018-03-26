@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.6.0] - 2018-03-26
 ### Changed
 - Content serving on root domain gets replaced by serving of a dedicated subdomain for RTM broker
   websockets. All unrelated traffic gets redirected to the root domain ([#1]).
@@ -38,7 +40,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Simple webserver setup
 
-[Unreleased]: https://gitlab.com/gfcc/dispatcher/compare/0.5.0...develop
+[Unreleased]: https://gitlab.com/gfcc/dispatcher/compare/0.6.0...develop
+[0.6.0]: https://gitlab.com/gfcc/dispatcher/compare/0.5.0...0.6.0
 [0.5.0]: https://gitlab.com/gfcc/dispatcher/compare/0.4.0...0.5.0
 [0.4.0]: https://gitlab.com/gfcc/dispatcher/compare/0.3.0...0.4.0
 [0.3.0]: https://gitlab.com/gfcc/dispatcher/compare/0.2.0...0.3.0
