@@ -6,7 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Changed
-- Changed vendor labels from `GFCC` to `RealMQ`.
+- Rename gfcc to realmq ([#1])
+
+[#1]: https://github.com/realmq/dispatcher/issues/1
 
 ## [0.6.0] - 2018-03-26
 ### Changed
@@ -42,10 +44,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Simple webserver setup
 
-[Unreleased]: https://gitlab.com/gfcc/dispatcher/compare/0.6.0...develop
-[0.6.0]: https://gitlab.com/gfcc/dispatcher/compare/0.5.0...0.6.0
-[0.5.0]: https://gitlab.com/gfcc/dispatcher/compare/0.4.0...0.5.0
-[0.4.0]: https://gitlab.com/gfcc/dispatcher/compare/0.3.0...0.4.0
-[0.3.0]: https://gitlab.com/gfcc/dispatcher/compare/0.2.0...0.3.0
-[0.2.0]: https://gitlab.com/gfcc/dispatcher/compare/0.1.0...0.2.0
-[0.1.0]: https://gitlab.com/gfcc/dispatcher/compare/e6fe1e10...0.1.0
+[Unreleased]: https://github.com/realmq/dispatcher/compare/0.6.0...develop
+[0.6.0]: https://github.com/realmq/dispatcher/compare/0.5.0...0.6.0
+[0.5.0]: https://github.com/realmq/dispatcher/compare/0.4.0...0.5.0
+[0.4.0]: https://github.com/realmq/dispatcher/compare/0.3.0...0.4.0
+[0.3.0]: https://github.com/realmq/dispatcher/compare/0.2.0...0.3.0
+[0.2.0]: https://github.com/realmq/dispatcher/compare/0.1.0...0.2.0
+[0.1.0]: https://github.com/realmq/dispatcher/compare/e6fe1e10...0.1.0

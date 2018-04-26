@@ -1,10 +1,10 @@
-# Greenfield dispatcher
+# RealMQ dispatcher
 
 ## Environment Variables
 
 | VAR   |  Description |
 |-------|--------------| 
-| **TLD** | The greenfield toplevel domain. |
+| **TLD** | The RealMQ toplevel domain. |
 | **TLS_CERT** | Path to the TLS certificate covering all subdomains. |
 | **TLS_CERT_KEY** | Path to the TLS certificate key covering all subdomains. |
 | **TLS_CERT_ROOT** | Root certificate chain used for oscp stapling. |
