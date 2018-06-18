@@ -8,6 +8,11 @@
 | **TLS_CERT** | Path to the TLS certificate covering all subdomains. |
 | **TLS_CERT_KEY** | Path to the TLS certificate key covering all subdomains. |
 | **TLS_CERT_ROOT** | Root certificate chain used for oscp stapling. |
+| **PLATFORM_HOST** | Hostname of platfrom service, default: `platform`. |
+| **PLATFORM_PORT** | Port of platfrom service, default: `8080`. |
+| **BROKER_HOST** | Hostname of platfrom service, default: `broker`. |
+| **BROKER_PORT** | Port of platfrom service, default: `8080`. |
+
 
 ## TLS Configuration
 Links for tweaking ssl configuration:
