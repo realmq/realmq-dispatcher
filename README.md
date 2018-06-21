@@ -10,8 +10,8 @@
 | **TLS_CERT_ROOT** | Root certificate chain used for oscp stapling. |
 | **PLATFORM_HOST** | Hostname of platfrom service, default: `platform`. |
 | **PLATFORM_PORT** | Port of platfrom service, default: `8080`. |
-| **BROKER_HOST** | Hostname of platfrom service, default: `broker`. |
-| **BROKER_PORT** | Port of platfrom service, default: `8080`. |
+| **BROKER_HOST** | Hostname of broker service, default: `broker`. |
+| **BROKER_PORT** | Port of broker service, default: `8080`. |
 
 
 ## TLS Configuration
