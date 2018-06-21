@@ -56,6 +56,9 @@ server {
     proxy_set_header Host            $host;
     proxy_set_header X-Forwarded-For $remote_addr;
   }
+  location /broker {
+    return 403;
+  }
 }
 
 # rtm.${TLD}
