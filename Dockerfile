@@ -3,7 +3,7 @@ FROM nginx:latest
 LABEL \
   Description="RealMQ dispatcher" \
   Vendor="RealMQ" \
-  Version="0.7.0"
+  Version="0.8.0"
 
 COPY default.conf.tpl /etc/nginx/conf.d/default.conf.tpl
 COPY ssl.conf /etc/nginx/includes/ssl.conf
