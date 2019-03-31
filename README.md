@@ -22,6 +22,8 @@ Links for tweaking ssl configuration:
 - [Android Version Distribution](https://developer.android.com/about/dashboards/index.html)
 - [Client TLS Support](https://www.ssllabs.com/ssltest/clients.html)
 
-
 ## License
+Copyright (c) 2018-2019 RealMQ GmbH.<br />
+The files in this archive are released under the [MIT License](LICENSE).
+<br />
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frealmq%2Frealmq-dispatcher.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Frealmq%2Frealmq-dispatcher?ref=badge_large)
