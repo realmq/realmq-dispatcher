@@ -1,4 +1,6 @@
 # RealMQ dispatcher
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frealmq%2Frealmq-dispatcher.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Frealmq%2Frealmq-dispatcher?ref=badge_shield)
+
 
 ## Environment Variables
 
@@ -19,3 +21,7 @@ Links for tweaking ssl configuration:
 - [Mozilla SSL Generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
 - [Android Version Distribution](https://developer.android.com/about/dashboards/index.html)
 - [Client TLS Support](https://www.ssllabs.com/ssltest/clients.html)
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frealmq%2Frealmq-dispatcher.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Frealmq%2Frealmq-dispatcher?ref=badge_large)
