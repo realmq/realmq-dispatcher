@@ -14,7 +14,8 @@
 | **PLATFORM_PORT** | Port of platfrom service, default: `8080`. |
 | **BROKER_HOST** | Hostname of broker service, default: `broker`. |
 | **BROKER_PORT** | Port of broker service, default: `8080`. |
-
+| **DASHBOARD_HOST** | Hostname of dashboard service, default: `dashboard`. |
+| **DASHBOARD_PORT** | Port of dashboard service, default: `8080`. |
 
 ## TLS Configuration
 Links for tweaking ssl configuration:

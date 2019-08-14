@@ -1,10 +1,13 @@
-
 upstream platform {
   server ${PLATFORM_HOST}:${PLATFORM_PORT};
 }
 
 upstream broker-websocket {
   server ${BROKER_HOST}:${BROKER_PORT};
+}
+
+upstream dashboard {
+  server ${DASHBOARD_HOST}:${DASHBOARD_PORT};
 }
 
 server {
@@ -58,6 +61,31 @@ server {
   }
   location /broker {
     return 403;
+  }
+}
+
+# dash.${TLD}
+server {
+  listen 443 ssl http2;
+  listen [::]:443 ssl http2;
+
+  # certs sent to the client in SERVER HELLO are concatenated in ssl_certificate
+  ssl_certificate ${TLS_CERT};
+  ssl_certificate_key ${TLS_CERT_KEY};
+
+  # verify chain of trust of OCSP response using Root CA and Intermediate certs
+  ssl_trusted_certificate ${TLS_CERT_ROOT};
+
+  # rest of ssl config
+  include includes/ssl.conf;
+
+  server_name dash.${TLD};
+  root /var/www;
+
+  location / {
+    proxy_pass http://dashboard;
+    proxy_set_header Host            $host;
+    proxy_set_header X-Forwarded-For $remote_addr;
   }
 }
 
